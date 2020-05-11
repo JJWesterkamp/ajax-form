@@ -1,6 +1,8 @@
 # Laravel Ajax Form
 
-**In progress** Ajax / XHR form implementation for Laravel projects.
+**In progress** 
+
+Ajax / XHR form implementation for barebone web projects.
 
 ## License
 

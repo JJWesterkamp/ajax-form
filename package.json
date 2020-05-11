@@ -1,9 +1,9 @@
 {
-  "name": "laravel-ajax-form",
-  "version": "1.0.0",
+  "name": "@jjwesterkamp/ajax-form",
+  "version": "0.1.0",
   "author": "Jeffrey Westerkamp",
-  "repository": "git@github.com:JJWesterkamp/laravel-ajax-form.git",
-  "description": "",
+  "repository": "https://github.com/JJWesterkamp/ajax-form",
+  "description": "[In progress] Ajax / XHR form implementation for barebone web projects.",
   "keywords": [],
   "license": "MIT",
   "main": "./dits/cjs/index.js",
