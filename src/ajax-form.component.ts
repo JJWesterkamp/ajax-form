@@ -1,5 +1,5 @@
 import axios, { AxiosError } from 'axios';
-import { identity } from './ajax-form.lib';
+import { identity, noop } from './ajax-form.lib';
 import { AjaxFormConfig, AjaxFormErrors, IAjaxForm } from './laravel-ajax-form.types';
 
 export class AjaxFormComponent implements IAjaxForm {
@@ -43,8 +43,8 @@ export class AjaxFormComponent implements IAjaxForm {
     // ------------------------------------------------------------------------------
 
     /**
-     * Attempts to submit the form with XHR. Lets the `authorizeSubmit` function
-     * from config decide whether the form may be submitted to the server.
+     * Attempts to submit the form with XHR. Lets the `prepareSubmit` function
+     * from config decide whether the form may be submitted to the server, if defined.
      */
     protected async submit(): Promise<void> {
 
@@ -76,9 +76,7 @@ export class AjaxFormComponent implements IAjaxForm {
         this.form.reset();
         this.clearErrors();
 
-        if (this.config.handleSuccess) {
-            this.config.handleSuccess(responseData, this);
-        }
+        (this.config.handleSuccess || noop) (responseData, this)
     }
 
     /**
@@ -91,9 +89,7 @@ export class AjaxFormComponent implements IAjaxForm {
         const transformedResponse = this.config.transformErrorResponse(errorData);
         this.displayErrors(transformedResponse);
 
-        if (this.config.handleErrors) {
-            this.config.handleErrors(transformedResponse);
-        }
+        (this.config.handleErrors || noop) (transformedResponse)
     }
 
     /**

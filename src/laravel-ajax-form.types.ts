@@ -50,8 +50,8 @@ export interface IAjaxForm {
  *      - How to insert error messages
  *      - How to clear error messages
  *      - Authorize, defer and/or modify submissions of the form (e.g. to hook in front-end
- *        validation / reCAPTCHA) How to transform the server response for errors into
- *        normalised `AjaxFormErrors` objects.
+ *        validation / reCAPTCHA)
+ *      - How to transform the server response for errors into a normalised interface
  */
 export interface AjaxFormConfig {
 
