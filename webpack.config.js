@@ -4,8 +4,8 @@ const { resolve } = require('path');
 module.exports = {
     mode: "production",
     entry: {
-        "package-name": "./src/index.ts",
-        "package-name.min": "./src/index.ts",
+        "laravel-ajax-form": "./src/ajax-form.index.ts",
+        "laravel-ajax-form.min": "./src/ajax-form.index.ts",
     },
     output: {
         path: resolve(__dirname, 'umd'),
@@ -32,7 +32,7 @@ module.exports = {
         rules: [
             {
                 test: /\.ts$/,
-                loaders: ["ts-loader"],
+                loader: "ts-loader",
                 exclude: /node_modules/,
             }
         ],

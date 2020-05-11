@@ -6,7 +6,6 @@
     "jsRules": {},
     "rules": {
         "max-line-length": false,
-        "no-namespace": [true, "allow-declarations"],
         "variable-name": false,
         "quotemark": [true, "single"]
     },
