@@ -8,7 +8,7 @@ module.exports = {
         "laravel-ajax-form.min": "./src/ajax-form.index.ts",
     },
     output: {
-        path: resolve(__dirname, 'umd'),
+        path: resolve(__dirname, 'dist/umd'),
         filename: '[name].js',
         library: 'PackageName',
         libraryTarget: 'umd',

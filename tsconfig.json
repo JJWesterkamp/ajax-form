@@ -12,7 +12,7 @@
         "strictNullChecks": true,
         "strictFunctionTypes": true,
         "declaration": true,
-        "outDir": "cjs"
+        "outDir": "dist/cjs"
     },
     "include":[
         "src/**/*.ts"
