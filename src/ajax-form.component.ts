@@ -1,6 +1,6 @@
 import axios, { AxiosError } from 'axios';
 import { identity, noop } from './ajax-form.lib';
-import { AjaxFormConfig, AjaxFormErrors, IAjaxForm } from './laravel-ajax-form.types';
+import { AjaxFormConfig, AjaxFormErrors, IAjaxForm } from './ajax-form.types';
 
 export class AjaxFormComponent implements IAjaxForm {
 
