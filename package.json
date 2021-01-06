@@ -24,7 +24,7 @@
     "test:ci": "karma start --single-run --no-auto-watch karma.conf.js"
   },
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "^0.21.1"
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",
